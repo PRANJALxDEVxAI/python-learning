@@ -1,0 +1,26 @@
+def main():
+    print("Welcome to the Calculator Demo")
+
+    # main loop
+    while True:
+        op = input("Enter operation (ADD / EXIT): ")
+
+        # .lower() converts input to lowercase
+        op = op.lower()
+
+        # now comparison becomes easier
+        if op == "add":
+            a = float(input("Enter first number: "))
+            b = float(input("Enter second number: "))
+            print("Result:", a + b)
+
+        elif op == "exit":
+            print("Exiting program...")
+            break
+
+        else:
+            print("Invalid option")
+
+# This ensures main() runs only when file is executed directly
+if __name__ == "__main__":
+    main()
