@@ -52,6 +52,7 @@ print("Answers:", len(list_answers))
 for i in range(15):
     j = random.randint(0, len(list_questions) - 1)
     q = list_questions[j]
+    print("Question", i + 1, "for ₹", list_prize_money[i])
     print(q)
     while True:
         answer = input("Enter your answer (1-4): ")
@@ -67,10 +68,13 @@ for i in range(15):
         question_correct = question_correct + 1 
 
         if question_correct == 5:
+            winnings = 10000
             print("Congratulations! You have reached the first safe level (₹10,000).")
         if question_correct == 10:
+            winnings = 320000
             print("Congratulations! You have reached the second safe level (₹3,20,000).")
         if question_correct == 15:
+            winnings = 10000000
             print("Congratulations! You have won the grand prize of ₹1 Crore!")
             break
     else:
@@ -86,7 +90,7 @@ for i in range(15):
     else:
         winnings = 10000000
 
-    qutting = input("Do you want to quit the game? (yes/no): ")
+    qutting = input("Do you want to quit the game? (yes/no): ".lower())
     if qutting == "yes":
         if question_correct > 0:
             winnings = list_prize_money[question_correct - 1]
