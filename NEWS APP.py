@@ -1,6 +1,6 @@
 import requests
 def get_news(topic):
-    API_KEY = "99ce8adb6e24442cb8303b9faa1a5fc1"
+    API_KEY = "YOUR_API_KEYPLZ"
     url = f"https://newsapi.org/v2/everything?q={topic}&language=en&sortBy=publishedAt&apiKey={API_KEY}"
     response= requests.get(url)
     data = response.json()
