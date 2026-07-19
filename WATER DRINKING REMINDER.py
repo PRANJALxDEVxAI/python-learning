@@ -5,7 +5,7 @@ def water_drinking_reminder():
     for i in range (5):
         print(f"Reminder {i+1}")
         win11toast.toast("PLEASE DRINK WATER💧!!!!!!")
-        time.sleep(18000)
+        time.sleep(3600)
 
 
 water_drinking_reminder()
